@@ -8,6 +8,7 @@ alias hi="history"
 
 alias cloudDocs="~/Library/Mobile Documents/com~apple~CloudDocs"
 
+# Multi-line prompt
 PS1="
 %n@%m
 %5~
