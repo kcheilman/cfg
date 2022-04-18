@@ -1,0 +1,35 @@
+Mostly from https://www.atlassian.com/git/tutorials/setting-up-a-repository
+
+* Initializing a new Git repo
+* Cloning an existing Git repo
+- git config --global init.defaultBranch main
+  - This is to match the 'main' branch name in the Git repo created above
+- cd <to directory to clone the repo to>
+- git clone <html path to the repo>
+
+* Committing a modified version of a file to the repo
+* Configuring a Git repo for remote collaboration
+* Common Git version control commands
+
+
+* Tracking dotfile
+https://www.atlassian.com/git/tutorials/dotfiles
+
+- git init --bare $HOME/.cfg
+- alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+- config config --local status.showUntrackedFiles no
+- echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.bashrc
+
+- config config --local status.showUntrackedFiles no
+- config clone https://github.com/kcheilman/cfg
+  fatal: working tree '/Users/kevin' already exists.
+  - This fails because clone is expecting 'kevin' to be empty and for clone to populate it. There are *many* discussion on what to do.
+  - Original documentation on dealing with dotfiles: https://news.ycombinator.com/item?id=11071754
+    - git clone --separate-git-dir=$HOME/.cfg /path/to/repo $HOME/myconf-tmp
+      - Continue to get error "fatal: repository path '/Users/kevin/.cfg' already exists and is not an empty directory"
+    - cp ~/myconf-tmp/.gitmodules ~  # If you use Git submodules
+    - rm -r ~/myconf-tmp/
+  - git clone --no-checkout  https://github.com/kcheilman/cfg $HOME/myconf-tmp
+    - Then manually updated .cfg/config with information from myconfig-tmp/.cfg/config
+
+ 
