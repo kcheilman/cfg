@@ -1,6 +1,10 @@
 Mostly from https://www.atlassian.com/git/tutorials/setting-up-a-repository
 
 * Initializing a new Git repo
+- git config --global core.editor emacs
+  - emacs is not working for shell in emacs when git command requires a message
+  - it also isn't working for terminal/shell use either.
+  - Setting to vi for now
 * Cloning an existing Git repo
 - git config --global init.defaultBranch main
   - This is to match the 'main' branch name in the Git repo created above
@@ -10,6 +14,11 @@ Mostly from https://www.atlassian.com/git/tutorials/setting-up-a-repository
 * Committing a modified version of a file to the repo
 * Configuring a Git repo for remote collaboration
 * Common Git version control commands
+
+* Emacs updates for git
+- install 'magit.el'
+  - Need to determine how to set --git-dir and --work-tree so magit
+    will work in HOME directory and others.
 
 
 * Tracking dotfile
