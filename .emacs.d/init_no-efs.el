@@ -11,7 +11,7 @@
 (setq ls-lisp-use-insert-directory-program nil)
 (require 'ls-lisp)
 
-(setq custom-file (expand-file-name ".emacs.d/custom.el" "~"))
+(setq custom-file (expand-file-name ".emacs.d/custom.el-pre-efs" "~"))
 (load-file custom-file)
 
 (require 'magit)
