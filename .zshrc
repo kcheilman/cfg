@@ -7,7 +7,7 @@ alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -g 200x80"
 alias ll="ls -l"
 alias hi="history"
 
-alias cloudDocs="~/Library/Mobile\ Documents/com~apple~CloudDocs"
+alias cloudDocs="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
 
 # Multi-line prompt
 PS1="
