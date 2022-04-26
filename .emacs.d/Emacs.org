@@ -197,7 +197,13 @@ between them easily.
 #+begin_src emacs-lisp
 
   (use-package doom-themes
-    :init (load-theme 'doom-palenight t))
+    :init
+    ;;(load-theme 'doom-palenight t)
+    ;;(load-theme 'doom-one t)
+    ;;(load-theme 'doom-one-light t)
+    ;;(load-theme 'doom-vibrant t)
+    (load-theme 'doom-dark+ t)
+    )
 
   ;;'(custom-enabled-themes '(tsdh-dark))
 
@@ -1339,7 +1345,9 @@ Adding settings which I've been using for *many* years
   (setq shell-multiple-shells t)
   (setq tab-width 4)
   (setq tcl-indent-level 2)
-  ;;  (setq uniquify-buffer-name-style (quote post-forward-angle-brackets) nil (uniquify))
+
+  ;;(require 'uniquify)
+  ;;(setq uniquify-buffer-name-style (quote post-forward-angle-brackets) nil (uniquify))
   ;;  (setq uniquify-separator "|")
 
 
