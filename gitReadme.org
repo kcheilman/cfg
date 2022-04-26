@@ -11,8 +11,12 @@ Mostly from https://www.atlassian.com/git/tutorials/setting-up-a-repository
 - cd <to directory to clone the repo to>
 - git clone <html path to the repo>
 
-* Committing a modified version of a file to the repo
+* Committing a modified version of a file and then push to the repo
+- git commit -m "<commit message>"
+- git push
+  
 * Configuring a Git repo for remote collaboration
+
 * Common Git version control commands
 
 * Emacs updates for git
