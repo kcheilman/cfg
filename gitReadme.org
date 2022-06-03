@@ -25,7 +25,7 @@ Mostly from https://www.atlassian.com/git/tutorials/setting-up-a-repository
     will work in HOME directory and others.
 
 
-* Tracking dotfile
+* Tracking dotfiles
 https://www.atlassian.com/git/tutorials/dotfiles
 
 - git init --bare $HOME/.cfg
@@ -44,5 +44,7 @@ https://www.atlassian.com/git/tutorials/dotfiles
     - rm -r ~/myconf-tmp/
   - git clone --no-checkout  https://github.com/kcheilman/cfg $HOME/myconf-tmp
     - Then manually updated .cfg/config with information from myconfig-tmp/.cfg/config
-
+- GIT flow is standard flow, but use 'config <git cmd>' instead of
+  'git <git cmd>'. The config alias handles setting the --git-dir and
+  --work-tree switches'
  
